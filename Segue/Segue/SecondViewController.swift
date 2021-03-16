@@ -4,7 +4,6 @@ class SecondViewController: UIViewController {
 
     var message : String? = nil
     
-    @IBOutlet weak var labelSecondView: UILabel!
     @IBOutlet weak var labelMessage: UILabel!
     
     override func viewDidLoad() {
@@ -13,7 +12,7 @@ class SecondViewController: UIViewController {
         if(message != nil){
             labelMessage.text = "Hello " + message!
         } else {
-            labelMessage.text = "Hello User!"
+            labelMessage.text = "Hello Guest!"
         }
     }
 }

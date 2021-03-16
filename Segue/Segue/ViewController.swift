@@ -3,9 +3,10 @@ import UIKit
 class ViewController: UIViewController {
 
     var username : String? = nil
+    var password : String? = nil
     
-    @IBOutlet weak var labelFirstView: UILabel!
     @IBOutlet weak var textUsername: UITextField!
+    @IBOutlet weak var textPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,13 @@ class ViewController: UIViewController {
         if(textUsername.text != ""){
             username = textUsername.text
             performSegue(withIdentifier: "segueNext", sender: nil)
+        } else {
+            let alert = UIAlertController(title: "Empty!", message: "Can't be empty!", preferredStyle: UIAlertController.Style.alert)
+            let ok = UIAlertAction(title: "Ok", style:UIAlertAction.Style.destructive) { (UIAlertAction) in
+                print("OK")
+            }
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
         }
         
     }
