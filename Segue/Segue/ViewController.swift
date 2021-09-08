@@ -12,6 +12,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    // TR : Navigasyon ayarları yapıldıktan sonra ilgili akışı tanımlayın.
+    // EN : After the navigation settings are made, define the relevant flow.
     @IBAction func next(_ sender: Any) {
         if(textUsername.text != ""){
             username = textUsername.text
