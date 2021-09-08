@@ -10,11 +10,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     @IBAction func next(_ sender: Any) {
-        
         if(textUsername.text != ""){
             username = textUsername.text
             performSegue(withIdentifier: "segueNext", sender: nil)
@@ -25,8 +23,7 @@ class ViewController: UIViewController {
             }
             alert.addAction(ok)
             self.present(alert, animated: true, completion: nil)
-        }
-        
+        }        
     }
     
     // TR : Segue gerceklesmeden hemen onceki kontrol ve atamalari gerceklestir.
@@ -40,4 +37,3 @@ class ViewController: UIViewController {
         }
     }
 }
-
