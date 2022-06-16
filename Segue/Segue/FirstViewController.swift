@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class FirstViewController: UIViewController {
 
     var username : String? = nil
     var password : String? = nil
